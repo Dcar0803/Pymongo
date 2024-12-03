@@ -6,6 +6,7 @@ from main import (
     update_document_field,
     delete_document_by_uuid,
 )
+import uuid
 
 def test_create_random_document():
     uuid = create_random_document()
