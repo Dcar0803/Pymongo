@@ -23,7 +23,13 @@ def create_random_document():
     return document["UUID"]
 
 def save_document(document):
-     collection.insert_one(document)
+
+    """Save a given document to the MongoDB collection.
+
+    Args:
+        document (dict): The document to save
+    """
+    collection.insert_one(document)
 
 def find_document_by_uuid(uuid_str):#Third function
 
