@@ -22,7 +22,7 @@ def create_random_document():
     collection.insert_one(document)
     return document["UUID"]
 
-def find_document_by_uuid(uuid_str):
+def find_document_by_uuid(uuid_str):#Third function
 
     """
     Find a MongoDB document by its UUID.
