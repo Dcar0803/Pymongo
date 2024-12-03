@@ -22,3 +22,9 @@ def test_update_document_field():
     update_document_field(uuid, "value", 500)
     updated_document = find_document_by_uuid(uuid)
     assert updated_document["value"] == 500
+
+
+def test_delete_document_by_uuid():
+    uuid = create_random_document()
+    delete_document_by_uuid(uuid)
+    assert find_document_by_uuid(uuid) is None
