@@ -7,6 +7,13 @@ collection = db.test_collection
 
 def create_random_document():
 
+    """
+    Create a random MongoDB document with a UUID field and return the UUID.
+
+    Returns:
+        str: UUID of the created document
+    """
+
     document = {
         "UUID": str(uuid.uuid4()),
         "name": "RandomName",
