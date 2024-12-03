@@ -43,3 +43,7 @@ def find_document_by_uuid(uuid_str):#Third function
         dict: The found document or None
     """
     return collection.find_one({"UUID": uuid_str})
+
+
+def update_document_field(uuid_str, field, value):
+    collection.update_one({"UUID": uuid_str}, {"$set": {field: value}})
