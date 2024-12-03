@@ -15,3 +15,10 @@ def test_find_document_by_uuid():
     document = find_document_by_uuid(uuid)
     assert document is not None
     assert document["UUID"] == uuid   
+
+
+def test_update_document_field():
+    uuid = create_random_document()
+    update_document_field(uuid, "value", 500)
+    updated_document = find_document_by_uuid(uuid)
+    assert updated_document["value"] == 500
