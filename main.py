@@ -59,4 +59,12 @@ def update_document_field(uuid_str, field, value):
 
 
 def delete_document_by_uuid(uuid_str):
+
+    """
+    Delete a MongoDB document by its UUID.
+
+    Args:
+        uuid_str (str): The UUID of the document to delete
+    """
+    
     collection.delete_one({"UUID": uuid_str})
