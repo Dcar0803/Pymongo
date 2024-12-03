@@ -23,4 +23,14 @@ def create_random_document():
     return document["UUID"]
 
 def find_document_by_uuid(uuid_str):
+
+    """
+    Find a MongoDB document by its UUID.
+
+    Args:
+        uuid_str (str): The UUID of the document to find
+
+    Returns:
+        dict: The found document or None
+    """
     return collection.find_one({"UUID": uuid_str})
