@@ -46,4 +46,13 @@ def find_document_by_uuid(uuid_str):#Third function
 
 
 def update_document_field(uuid_str, field, value):
+
+    """ Update a specific field in a MongoDB document with a specified UUID.
+
+    Args:
+        uuid_str (str): The UUID of the document to update
+        field (str): The field to update
+        value: The new value for the field
+    """
+
     collection.update_one({"UUID": uuid_str}, {"$set": {field: value}})
