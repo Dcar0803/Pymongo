@@ -22,6 +22,9 @@ def create_random_document():
     collection.insert_one(document)
     return document["UUID"]
 
+def save_document(document):
+     collection.insert_one(document)
+
 def find_document_by_uuid(uuid_str):#Third function
 
     """
