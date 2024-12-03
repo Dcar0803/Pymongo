@@ -56,3 +56,7 @@ def update_document_field(uuid_str, field, value):
     """
 
     collection.update_one({"UUID": uuid_str}, {"$set": {field: value}})
+
+
+def delete_document_by_uuid(uuid_str):
+    collection.delete_one({"UUID": uuid_str})
