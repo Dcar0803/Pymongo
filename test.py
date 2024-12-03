@@ -1,3 +1,12 @@
+import pytest
+from main import (
+    create_random_document,
+    save_document,
+    find_document_by_uuid,
+    update_document_field,
+    delete_document_by_uuid,
+)
+
 def test_create_random_document():
     uuid = create_random_document()
     assert find_document_by_uuid(uuid) is not None
